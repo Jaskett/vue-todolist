@@ -7,3 +7,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.fa-circle-xmark {
+    cursor: pointer;
+}
+
+.fa-circle-xmark:hover {
+    color: red;
+}
