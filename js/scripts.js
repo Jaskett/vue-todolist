@@ -8,7 +8,7 @@ createApp({
             arrList: [
                 {
                     text: 'Ripassare VUEJs',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Fare la spesa',
@@ -30,6 +30,12 @@ createApp({
         }
     },
     methods: {
-        
+        changeStat(index) {
+            if(this.arrList[index].done) {
+                this.arrList[index].done = false;
+            } else {
+                this.arrList[index].done = true;
+            }
+        }
     }
 }).mount('#app')
