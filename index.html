@@ -11,12 +11,14 @@
 </head>
 <body>
     <div id="app">
-        <input type="text">
-        <button>Invia</button>
-        <ul v-for="(text, index) in items">
+        <div id="newToDo">
+            <input type="text">
+            <button>Invia</button>
+        </div>
+        <ul v-for="(text, index) in arrList">
             <li>
-                {{items[index].text}}
-                <span><i class="fa-solid fa-circle-xmark"></i></span>
+                {{arrList[index].text}}
+                <i title="Premi per eliminare la nota" class="fa-solid fa-circle-xmark"></i>
             </li>
         </ul>
     </div>

@@ -5,11 +5,10 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            newItem: '',
-            items: [
+            arrList: [
                 {
                     text: 'Ripassare VUEJs',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'Fare la spesa',
