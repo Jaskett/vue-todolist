@@ -12,7 +12,7 @@ createApp({
             arrList: [
                 {
                     text: 'Ripassare VUEJs',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'Fare la spesa',
@@ -34,9 +34,26 @@ createApp({
         }
     },
     methods: {
+        subM() {
+            let control = null;
+            if(this.newT.text == '') {
+                control = false;
+            } else {
+                control = true;
+            }
+            return control;
+        },
         submitNew() {
-            this.arrList.push(this.newT);
-            this.newT = '';
+            if((this.newT.text == '') || (!isNaN(this.newT.text))) {
+                alert('inserisci il titolo della nota');
+            } else {
+                let toDo = {
+                    text: this.newT.text,
+                    done: this.newT.done
+                }
+                this.arrList.push(toDo);
+                this.newT.text = ' ';
+            }
         },
         changeStat(index) {
             if(this.arrList[index].done) {
@@ -46,7 +63,7 @@ createApp({
             }
         },
         removeToDo(index) {
-            this.arrList.splice(this.arrList[index], 1)
+            this.arrList.splice(index, 1)
         }
     }
 }).mount('#app')

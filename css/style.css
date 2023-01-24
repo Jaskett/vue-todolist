@@ -8,6 +8,25 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 3rem;
+}
+
+.main-title {
+    width: 70vw;
+    display: flex;
+    margin: 60px auto 0;
+    text-align: center;
+
+}
+
+img {
+    height: 60px;
+    margin-top: 40px;
+}
+
 #app {
     width: 70vw;
     margin: 60px auto 0;
@@ -57,18 +76,15 @@ ul li {
 
 .fa-circle-xmark {
     cursor: pointer;
+    text-decoration: none!important;
+    color: #000!important;
 }
 
 .fa-circle-xmark:hover {
-    color: red;
+    color: red!important;
 }
 
 .done {
     text-decoration: line-through;
     color: gray;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 40px;
 }
