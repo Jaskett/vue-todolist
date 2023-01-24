@@ -5,6 +5,10 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newT: {
+                text: '',
+                done: false
+            },
             arrList: [
                 {
                     text: 'Ripassare VUEJs',
@@ -30,12 +34,19 @@ createApp({
         }
     },
     methods: {
+        submitNew() {
+            this.arrList.push(this.newT);
+            this.newT = '';
+        },
         changeStat(index) {
             if(this.arrList[index].done) {
                 this.arrList[index].done = false;
             } else {
                 this.arrList[index].done = true;
             }
+        },
+        removeToDo(index) {
+            this.arrList.splice(this.arrList[index], 1)
         }
     }
 }).mount('#app')
