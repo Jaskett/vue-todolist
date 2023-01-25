@@ -24,7 +24,7 @@
             <ul>
                 <li v-for="(text, index) in arrList" :class="{ done: arrList[index].done }" @click="(arrList[index].done) ? arrList[index].done=false : arrList[index].done=true">
                     <h4>{{arrList[index].text}}</h4>
-                    <div @click="() => arrList.splice(index, 1)"><i title="Premi per eliminare la nota" class="fa-solid fa-circle-xmark"></i></div>
+                    <div @click.stop="() => arrList.splice(index, 1)"><i title="Premi per eliminare la nota" class="fa-solid fa-circle-xmark"></i></div>
                 </li>
             </ul>
         </div>
